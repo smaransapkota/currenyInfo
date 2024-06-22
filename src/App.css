@@ -99,7 +99,7 @@ body {
   margin-bottom: 15px;
 }
 
-.flexfirst input[type="number"] {
+.flexfirst input[type="text"] {
   padding: 12px; /* Increased padding for better touch and visual appearance */
   font-size: 16px; /* Larger font size for better readability */
   width: 180px; /* Adjusted width */

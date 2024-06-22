@@ -4,7 +4,9 @@ import axios from "axios";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css"; // Import custom CSS file for styling
-import "@lottiefiles/lottie-player";
+// import "@lottiefiles/lottie-player";
+import Lottie from "react-lottie-player";
+import lottieJson from "./assets/lottieLoading.json";
 
 function App() {
   const [allData, setAllData] = useState([]);
@@ -15,7 +17,7 @@ function App() {
   const [activeData, setActiveData] = useState({});
   const [publishedOn, setPublishedOn] = useState("");
   const [modifiedOn, setModifiedOn] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(null);
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const [convertedAmount, setConvertedAmount] = useState(null);
 
@@ -206,7 +208,7 @@ function App() {
         <div className="conversion-container">
           <div className="flexfirst">
             <input
-              type="number"
+              type="text"
               value={amount}
               onChange={handleAmountChange}
               placeholder="Amount"
@@ -261,13 +263,12 @@ function App() {
       )}
       {loading ? (
         <div className="animation-container">
-          <lottie-player
-            autoplay
+          <Lottie
+            play
             loop
-            mode="normal"
-            src="https://lottie.host/a22648ca-a979-48a5-960c-26d54bd48924/IvYOpIkPff.json"
+            animationData={lottieJson}
             style={{ width: "100%", backgroundColor: "white" }}
-          ></lottie-player>
+          ></Lottie>
         </div>
       ) : !active ? (
         <table className="currency-table">
