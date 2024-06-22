@@ -179,10 +179,14 @@ function App() {
       data.rates.some((r) => r.currency.iso3 === selectedCurrency)
     );
     if (rate) {
-      const { buy } = rate.rates.find(
+      const { buy, currency } = rate.rates.find(
         (r) => r.currency.iso3 === selectedCurrency
       );
-      setConvertedAmount((e.target.value * buy).toFixed(2));
+      if (currency.unit > 1) {
+        setConvertedAmount((e.target.value * (buy / currency.unit)).toFixed(2));
+      } else {
+        setConvertedAmount((e.target.value * buy).toFixed(2));
+      }
     }
   };
 
