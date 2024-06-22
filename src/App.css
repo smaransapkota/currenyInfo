@@ -1,0 +1,221 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dates-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dates-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.currency-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.currency-table th,
+.currency-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+.currency-table th {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  font-weight: bold; /* Bold font weight */
+}
+
+.currency-table td {
+  background-color: #f9f9f9; /* Light gray background color */
+}
+
+.currency-table tr:hover {
+  background-color: #f1f1f1; /* Lighter gray on hover */
+}
+
+.currency-flag {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.active-data-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.active-flag {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.animation-container {
+  margin-top: 150px;
+}
+
+.conversion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Adjusted to space between */
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.flexfirst {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flexfirst input[type="number"] {
+  padding: 12px; /* Increased padding for better touch and visual appearance */
+  font-size: 16px; /* Larger font size for better readability */
+  width: 180px; /* Adjusted width */
+  margin-right: 10px;
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+.flexfirst select {
+  padding: 12px; /* Increased padding for better touch and visual appearance */
+  font-size: 16px; /* Larger font size for better readability */
+  width: 100px; /* Adjusted width */
+  margin-right: 10px;
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.flexfirst input[type="number"]:focus,
+.flexfirst select:focus {
+  outline: none; /* Remove default outline on focus */
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.npr-button {
+  padding: 12px 20px; /* Padding for button */
+  font-size: 16px; /* Larger font size for better readability */
+  color: white; /* Text color */
+  background-color: #007bff; /* Blue background color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  user-select: none; /* Disable text selection */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.npr-button:disabled {
+  background-color: #ccc; /* Light gray background when disabled */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+.converted-amount {
+  margin-left: 20px; /* Spacing between input and converted amount */
+  font-size: 16px; /* Font size for converted amount */
+  color: #333; /* Text color */
+}
+
+.conversion-container {
+}
+
+.amount-input {
+  padding: 8px;
+  font-size: 14px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.currency-select {
+  padding: 8px;
+  font-size: 14px;
+  width: 120px;
+}
+
+.npr-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .currency-table th,
+  .currency-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .flexfirst input[type="number"],
+  .flexfirst select {
+    padding: 10px;
+    font-size: 14px;
+    width: 140px;
+  }
+
+  .npr-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .app-title {
+    font-size: 20px;
+  }
+
+  .dates-info p {
+    font-size: 12px;
+  }
+
+  .active-flag {
+    width: 30px;
+  }
+
+  .amount-input {
+    padding: 6px;
+    font-size: 12px;
+    width: 80px;
+  }
+
+  .currency-select {
+    padding: 6px;
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .npr-button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .currency-flag {
+    width: 20px;
+  }
+}
